@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_movie/data/movie.dart';
+import 'package:flutter_movie/widgets/arc_banner_image.dart';
 
 class MovieDetailHeader extends StatelessWidget {
   MovieDetailHeader({@required this.movie});
   final Movie movie;
 
   Widget _arcBannerImage() {
-    return Image.asset(
-      movie.bannerUrl,
+    return ArcBannerImage(
+      imageUrl: movie.bannerUrl,
     );
   }
 
