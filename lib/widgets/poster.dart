@@ -14,8 +14,7 @@ class Poster extends StatelessWidget {
     var radius = BorderRadius.circular(4.0);
     return Material(
       borderRadius: radius,
-      elevation: 15.0,
-      shadowColor: Colors.pinkAccent,
+      elevation: 5.0,
       child: ClipRRect(
         borderRadius: radius,
         child: Image.asset(
