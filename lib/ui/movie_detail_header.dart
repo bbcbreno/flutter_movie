@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_movie/data/movie.dart';
 import 'package:flutter_movie/widgets/arc_banner_image.dart';
 import 'package:flutter_movie/widgets/poster.dart';
+import 'package:flutter_movie/widgets/rating_information.dart';
 
 class MovieDetailHeader extends StatelessWidget {
   MovieDetailHeader({@required this.movie});
@@ -17,7 +18,23 @@ class MovieDetailHeader extends StatelessWidget {
   }
 
   Widget _movieInformation() {
-    return Placeholder();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          movie.title,
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.w700,
+            color: Colors.black87,
+          ),
+        ),
+        SizedBox(height: 8.0),
+        RatingInformation(movie: movie),
+        SizedBox(height: 8.0),
+        Text('Chips'),
+      ],
+    );
   }
 
   @override

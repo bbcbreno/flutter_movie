@@ -27,9 +27,10 @@ class MovieDetailsPage extends StatelessWidget {
             MovieDetailHeader(
               movie: movie,
             ),
-            SizedBox(height: 20.0),
-            _storyline(),
-            SizedBox(height: 20.0),
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: _storyline(),
+            ),
             _photoScroller(),
             SizedBox(height: 20.0),
             _actorScroller(),
