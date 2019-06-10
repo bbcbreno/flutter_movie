@@ -8,13 +8,7 @@ class Storyline extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'Story line',
-          style: TextStyle(fontSize: 18.0),
-        ),
-        SizedBox(height: 8.0),
         Text(
           movie.storyline,
           style: TextStyle(color: Colors.black45, fontSize: 16.0),
@@ -40,7 +34,7 @@ class Storyline extends StatelessWidget {
               )
             ],
           ),
-        )
+        ),
       ],
     );
   }
