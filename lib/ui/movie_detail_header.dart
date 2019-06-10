@@ -17,6 +17,19 @@ class MovieDetailHeader extends StatelessWidget {
     );
   }
 
+  List<Widget> _buildCategoryChips() {
+    return movie.categories.map((category) {
+      return Padding(
+        padding: EdgeInsets.only(right: 8.0),
+        child: Chip(
+          label: Text(category),
+          labelStyle: TextStyle(color: Colors.black45),
+          backgroundColor: Colors.black12,
+        ),
+      );
+    }).toList();
+  }
+
   Widget _movieInformation() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -32,7 +45,7 @@ class MovieDetailHeader extends StatelessWidget {
         SizedBox(height: 8.0),
         RatingInformation(movie: movie),
         SizedBox(height: 8.0),
-        Text('Chips'),
+        Row(children: _buildCategoryChips()),
       ],
     );
   }
