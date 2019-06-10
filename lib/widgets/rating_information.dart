@@ -5,7 +5,7 @@ class RatingInformation extends StatelessWidget {
   RatingInformation({this.movie});
   final Movie movie;
 
-  _buildRatingBar() {
+  Widget _buildRatingBar() {
     var stars = <Widget>[];
 
     for (var i = 1; i <= 5; i++) {
